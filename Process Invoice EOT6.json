@@ -1,0 +1,2859 @@
+{
+  "name": "Process Invoice EOT6",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Invoices",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $('Invoice Agent (Vision)').item.json.output.Nama }}",
+            "Nomor Invoice": "={{ $('Invoice Agent (Vision)').item.json.output.Nomor_Invoice }}",
+            "Nomor Proyek": "={{ $('Invoice Agent (Vision)').item.json.output.Nomor_Proyek }}",
+            "Tanggal": "={{ $('Invoice Agent (Vision)').item.json.output.Tanggal }}",
+            "Sebelum PPN": "={{ $('Invoice Agent (Vision)').item.json.output.Sebelum_PPN }}",
+            "11%": "={{ $('Invoice Agent (Vision)').item.json.output.PPN_11 }}",
+            "Setelah PPN": "={{ $('Invoice Agent (Vision)').item.json.output.Setelah_PPN }}",
+            "Mata Uang": "={{ $('Invoice Agent (Vision)').item.json.output.Mata_Uang }}",
+            "Catatan": "={{ $('Invoice Agent (Vision)').item.json.output.Catatan }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $json._file_id }}/view",
+            "Referensi_PO": "={{ $('Invoice Agent (Vision)').item.json.output.Referensi_PO }}",
+            "File_ID": "={{ $json._file_id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "3c623da3-cb9e-4fad-8696-85f0a19ee841",
+      "name": "Update Booking List",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        176,
+        64
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"Nama\": { \"type\": \"string\", \"description\": \"Ambil nama vendor/klien dari dokumen\" },\n    \"Jenis_Dokumen\": { \"type\": \"string\", \"description\": \"Jenis dokumen yang terdeteksi\" },\n    \"Nomor_Invoice\": { \"type\": \"string\", \"description\": \"Nomor unik dokumen (invoice, PO, policy, atau referensi bank)\" },\n    \"Nomor_Proyek\": { \"type\": \"string\", \"description\": \"Nomor proyek atau kode\" },\n    \"Tanggal\": { \"type\": \"string\", \"description\": \"Tanggal dokumen\" },\n    \"Mata_Uang\": { \"type\": \"string\", \"description\": \"Kode mata uang 3 huruf, misalnya IDR, USD, JPY\" },\n    \"Sebelum_PPN\": { \"type\": \"number\", \"description\": \"Subtotal sebelum pajak\" },\n    \"PPN_11\": { \"type\": \"number\", \"description\": \"Jumlah pajak\" },\n    \"Setelah_PPN\": { \"type\": \"number\", \"description\": \"Total setelah pajak\" },\n    \"Referensi_PO\": { \"type\": \"string\", \"description\": \"Nomor PO/kontrak terkait yang disebutkan dalam dokumen ini, jika ada. Kosongkan jika tidak disebutkan\" },\n    \"Catatan\": { \"type\": \"string\", \"description\": \"Catatan tambahan, termasuk penjelasan jika jenis dokumen tidak sesuai ekspektasi. Kosongkan jika tidak ada\" },\n    \"confidence_score\": { \"type\": \"number\", \"description\": \"Tingkat keyakinan (1-100)\" },\n    \"butuh_review\": { \"type\": \"boolean\", \"description\": \"True jika perlu review manual\" }\n  },\n  \"required\": [\"Nama\", \"Jenis_Dokumen\", \"Nomor_Invoice\", \"Nomor_Proyek\", \"Tanggal\", \"Mata_Uang\", \"Sebelum_PPN\", \"PPN_11\", \"Setelah_PPN\", \"Referensi_PO\", \"Catatan\", \"confidence_score\", \"butuh_review\"]\n}"
+      },
+      "id": "604e4018-a583-45c9-81b7-a57ecd789cd5",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        -400,
+        1040
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "=data",
+        "options": {
+          "keepSource": "both"
+        }
+      },
+      "id": "a78eae5e-ee83-4c0b-9f2d-12b3ca1fd139",
+      "name": "Extract from File",
+      "type": "n8n-nodes-base.extractFromFile",
+      "position": [
+        -2896,
+        720
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a helpful booking assistant that extracts relevant information from financial documents.\nDocuments may be in Indonesian, English, Japanese, or other languages. Always extract the correct values accurately and map them to the requested JSON schema keys regardless of the source language.\n\nSTEP 1 — Confirm document type.\nThis document has been routed here as an \"Invoice.\" Proceed with invoice-style extraction. If, after reading the document, it clearly does NOT match this category (e.g. it is obviously a Purchase Order with no billing request, or a bank payment instruction), set Jenis_Dokumen to what you actually observe, set butuh_review to true, and explain the mismatch in Catatan. Otherwise, set Jenis_Dokumen to \"Invoice\".\n\nIMPORTANT: Do not use the filename or folder name to determine document type. A file may be named with \"PO,\" \"Invoice,\" etc. simply because a human filed it alongside a related document — this does not reflect its actual content. Always classify strictly based on what the document itself shows.\n\nSTEP 2 — Find the unique reference number.\nAdapt dynamically based on the document type to find the primary identifying number:\n- Standard Invoices / Tax Invoices: Invoice Number, Tax Invoice Number (Nomor Faktur / Faktur Pajak), 請求書番号. Invoices often use formatted code strings containing slashes, letters, and numbers (e.g., 612/AG/SABA-JKT/XI/23).\n- Insurance Policies: Policy Number, 証券番号\n- Contracts / Purchase Orders: Contract Number, PO Number, 契約番号\n- Payment Applications / Bank Transfers: Bank Reference Number (e.g., GCMS Ref No., Reference Number, Transaction Ref No., Application No.)\n- Other Forms/Documents: Whichever prominent tracking, document ID, or reference number is available.\nUse whichever unique reference number is most prominent and appropriate for the document type as \"Nomor_Invoice,\" even if it is not literally labeled \"invoice.\"\nDetermine the currency used in the document and convert it to a standard 3-letter code for \"Mata_Uang\" (e.g. IDR, USD, EUR, SGD, JPY). Currency may be written in different languages or symbols — for example: 円 or ¥ means JPY, 米ドル or $ means USD, Rp means IDR. If no currency is stated anywhere on the document, leave \"Mata_Uang\" empty and note this in \"Catatan.\"\n\nSTEP 3 — Extract financial figures.\nExtract Sebelum_PPN (subtotal before tax), PPN_11 (tax amount), and Setelah_PPN (grand total after tax).\nIMPORTANT:\n- If the document is an Insurance Policy, Payment Application, Contract, or Receipt that only shows a single total amount (e.g., a total premium, flat fee, or payment amount) without a clear tax breakdown: Put that total amount into \"Setelah_PPN\" (Grand Total) AND \"Sebelum_PPN\" (Subtotal). Set \"PPN_11\" (Tax) to 0. Do not hide the main billing amount in the \"Catatan\" — the final amount to be paid MUST go into \"Setelah_PPN\".\n- If the document is a Purchase Order (PO), Rate Card, or Contract that only lists unit rates without a final billed total, set \"Sebelum_PPN\", \"PPN_11\", and \"Setelah_PPN\" to 0.\n\nSTEP 4 — Match the booking account.\nTo assign the invoice content to the correct booking account and the matching Google Drive folder for that account, use the tool \"booking accounts.\" If no booking account clearly matches after your first search, use \"Unclassified\" as the account and proceed immediately to finalize your answer. Do not repeat the search more than once.\n\nSTEP 5 — Assess confidence and flag for review.\nSet \"confidence_score\" (1–100) based on how certain you are about the extracted values.\nSet \"butuh_review\" to true if ANY of the following apply:\n- The document does not appear to match its expected category\n- Required financial fields (Sebelum_PPN, PPN_11, Setelah_PPN) are not clearly present\n- Any text is blurry, ambiguous, or you are unsure which booking account applies\n- You are extracting a reference number from a non-standard field (e.g. a bank GCMS Ref No., policy number, or application number used in place of an invoice number)\nOtherwise set \"butuh_review\" to false.\n\nSTEP 6 — Find related PO reference (if applicable).\nIf this document mentions a related Purchase Order, contract number, or reference number that connects it to another document (e.g. an invoice citing 'PO No. 12345', or a payment proof referencing a specific PO), record that number in \"Referensi_PO\". This allows related documents to be grouped together later even if they arrived through different files. Leave empty if not mentioned.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attach the JSON as plain text.",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -608,
+        80
+      ],
+      "id": "f5c94994-7755-456e-9f47-89f51840efb9",
+      "name": "Invoice Agent (Vision)",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -2080,
+        1088
+      ],
+      "id": "2a5a87f2-3415-4db8-ae59-2edd11dee231",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "split",
+        "pageRanges": "1-",
+        "options": {}
+      },
+      "type": "n8n-nodes-pdf.pdfToolkit",
+      "typeVersion": 1,
+      "position": [
+        -3376,
+        704
+      ],
+      "id": "4e1460fe-2c09-4fd4-bfe2-61de8830bcc0",
+      "name": "Split a PDF",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 192590858,
+          "mode": "list",
+          "cachedResultName": "Purchase Order",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=192590858"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $('PO Agent (Vision)').item.json.output.Nama }}",
+            "Nomor Invoice": "={{ $('PO Agent (Vision)').item.json.output.Nomor_Invoice }}",
+            "Nomor Proyek": "={{ $('PO Agent (Vision)').item.json.output.Nomor_Proyek }}",
+            "Tanggal": "={{ $('PO Agent (Vision)').item.json.output.Tanggal }}",
+            "Sebelum PPN": "={{ $('PO Agent (Vision)').item.json.output.Sebelum_PPN }}",
+            "11%": "={{ $('PO Agent (Vision)').item.json.output.PPN_11 }}",
+            "Setelah PPN": "={{ $('PO Agent (Vision)').item.json.output.Setelah_PPN }}",
+            "Mata Uang": "={{ $('PO Agent (Vision)').item.json.output.Mata_Uang }}",
+            "Catatan": "={{ $('PO Agent (Vision)').item.json.output.Catatan }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $json._file_id }}/view",
+            "File_ID": "={{ $json._file_id }}",
+            "Referensi_PO": "={{ $('PO Agent (Vision)').item.json.output.Referensi_PO }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "5bb0a138-444d-4218-8865-eadf183ede5b",
+      "name": "Update Purchase Order",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        176,
+        288
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -3584,
+        688
+      ],
+      "id": "7f638588-06ee-4b85-9207-113c73a19906",
+      "name": "Download file1",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000,
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "JtzXuMbjvw8uuVpk",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "e5b7875f-c117-452f-afce-68ab19bb7c0b",
+              "leftValue": "={{ $json.output.butuh_review }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "7bd16805-64a6-4f12-a7ef-3a4525ab9fda",
+              "leftValue": "={{ $json.output.confidence_score }}",
+              "rightValue": 80,
+              "operator": {
+                "type": "number",
+                "operation": "lt"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -1488,
+        528
+      ],
+      "id": "c8fbc34d-7a53-4329-a216-701948023a30",
+      "name": "If3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "You are a document classification assistant. Read the provided document and determine which of the following five categories it belongs to, so it can be routed to the correct specialist for processing.\n\n- \"Invoice\" — Standard invoices, tax invoices, insurance policies, contracts, receipts, or any document requesting payment for goods/services already delivered or a fee/premium owed.\n- \"Purchase_Order\" — Purchase orders, rate cards, or contracts listing agreed unit rates/terms for a future delivery, WITHOUT a final billed total or payment request.\n- \"Remittance_Instruction\" — A document instructing a bank or party to make a payment/transfer (contains things like a GCMS Ref No., transfer instruction, or payment application FROM the payer, BEFORE the transfer happens).\n- \"Remittance_Advice\" — A document from the payer to the payee explaining/breaking down WHICH invoice(s) a payment covers (e.g. \"this payment settles Invoice No. X, Y, Z\"). It explains what was paid for, not proof that money moved.\n- \"Bukti_Transfer\" — A bank-issued proof/receipt confirming a transfer was actually completed (bank transaction slip, mobile banking confirmation screenshot, SWIFT confirmation, or bank statement excerpt showing a debit/credit). It shows the transfer itself happened — sender account, receiver account, amount, transfer reference/trace number, timestamp — issued BY the bank, not by the payer or payee.\n\nDISTINGUISHING Remittance_Instruction vs Remittance_Advice vs Bukti_Transfer (these are easily confused):\n- Remittance_Instruction = a REQUEST to pay, sent before the transfer, usually generated by accounting/ERP software.\n- Remittance_Advice = an EXPLANATION of what a payment was for, usually listing invoice numbers and amounts, sent by the payer to the payee.\n- Bukti_Transfer = PROOF the money actually moved, issued by a bank, with a bank transaction/reference number.\nIf a document only shows a bank transfer confirmation with no invoice breakdown, it is Bukti_Transfer, not Remittance_Advice.\nIf a document lists which invoices are being settled but has no bank transaction reference number, it is Remittance_Advice, not Bukti_Transfer.\n\nCLASSIFICATION RULES & CONFIDENCE SCORING:\n1. Base your confidence_score (1-100) strictly on how clearly the document matches your chosen category — do not default to high confidence just because the document looks like a clean financial document in general.\n2. If the document is blurry, doesn't clearly fit one of the five categories above, or you are unsure, you MUST set Jenis_Dokumen to \"Unknown\" and set butuh_review to true.\n3. CRITICAL: If you set Jenis_Dokumen to \"Unknown\", you must set the confidence_score to 0.\n\nCONTEXT HINTS:\nThis document was found inside a Google Drive folder named: {{ $json.folder_hint }}. Use this context to help you determine the correct document type.\n\nIMPORTANT OVERRIDE:\nDo not use the filename or folder name to blindly determine document type. A file may be named with \"PO,\" \"Invoice,\" etc. simply because a human filed it alongside a related document — this does not reflect its actual content. Always classify strictly based on what the document itself shows (e.g. a file named \"PO_xyz.pdf\" may actually be a bank transfer receipt, not a Purchase Order — classify it as what it actually is).",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -2032,
+        736
+      ],
+      "id": "a5c1b9f6-1f46-4c35-8914-f3b55bb13bca",
+      "name": "Classifier Agent",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"Jenis_Dokumen\": {\n      \"type\": \"string\",\n      \"enum\": [\"Invoice\", \"Purchase_Order\", \"Remittance_Instruction\", \"Remittance_Advice\", \"Bukti_Transfer\", \"Unknown\"],\n      \"description\": \"Kategori dokumen untuk routing ke agen spesialis yang sesuai\"\n    },\n    \"confidence_score\": {\n      \"type\": \"number\",\n      \"description\": \"Tingkat keyakinan AI terhadap klasifikasi ini (1-100).\"\n    },\n    \"butuh_review\": {\n      \"type\": \"boolean\",\n      \"description\": \"True jika dokumen buram, ambigu, tidak dikenal, atau AI ragu. False jika format sangat jelas.\"\n    }\n  },\n  \"required\": [\"Jenis_Dokumen\", \"confidence_score\", \"butuh_review\"]\n}"
+      },
+      "id": "56e1247a-1f2b-40f5-ae56-ed692b5eab7e",
+      "name": "Structured Output Parser1",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        -1792,
+        1088
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.output.Jenis_Dokumen }}",
+                    "rightValue": "=Invoice",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "a44c583a-bcea-44b8-8e48-be13a2d8aef3"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e0585f25-e7c6-418d-8a03-f307d24ebd0f",
+                    "leftValue": "={{ $json.output.Jenis_Dokumen }}",
+                    "rightValue": "Purchase_Order",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "d67b8be3-4ee0-4b60-ac39-0712db601400",
+                    "leftValue": "={{ $json.output.Jenis_Dokumen }}",
+                    "rightValue": "Remittance_Instruction",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "c4f1ca96-0f77-4fc2-951c-68791c981ac2",
+                    "leftValue": "={{ $json.output.Jenis_Dokumen }}",
+                    "rightValue": "Remittance_Advice",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ad0f9129-a753-46ac-8b04-2802d99ec104",
+                    "leftValue": "={{ $json.output.Jenis_Dokumen }}",
+                    "rightValue": "Bukti Transfer",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -944,
+        448
+      ],
+      "id": "9e35336f-ca40-4393-8c85-035146c04754",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "STEP 1 — Confirm document type.\nThis document has been routed here as a \"Purchase Order.\" Proceed with PO-style extraction. If, after reading the document, it clearly does NOT match this category (e.g. it is actually a billing invoice requesting payment, not a PO listing agreed terms), set Jenis_Dokumen to what you actually observe, set butuh_review to true, and explain the mismatch in Catatan. Otherwise, set Jenis_Dokumen to \"Purchase_Order\".\n\nSTEP 2 — Find the unique reference number.\nAdapt dynamically based on the document type to find the primary identifying number:\n- Standard Invoices / Tax Invoices: Invoice Number, Tax Invoice Number (Nomor Faktur / Faktur Pajak), 請求書番号. Invoices often use formatted code strings containing slashes, letters, and numbers (e.g., 612/AG/SABA-JKT/XI/23).\n- Insurance Policies: Policy Number, 証券番号\n- Contracts / Purchase Orders: Contract Number, PO Number, 契約番号\n- Payment Applications / Bank Transfers: Bank Reference Number (e.g., GCMS Ref No., Reference Number, Transaction Ref No., Application No.)\n- Other Forms/Documents: Whichever prominent tracking, document ID, or reference number is available.\nUse whichever unique reference number is most prominent and appropriate for the document type as \"Nomor_Invoice,\" even if it is not literally labeled \"invoice.\"\nDetermine the currency used in the document and convert it to a standard 3-letter code for \"Mata_Uang\" (e.g. IDR, USD, EUR, SGD, JPY). Currency may be written in different languages or symbols — for example: 円 or ¥ means JPY, 米ドル or $ means USD, Rp means IDR. If no currency is stated anywhere on the document, leave \"Mata_Uang\" empty and note this in \"Catatan.\"\n\nSTEP 3 — Extract financial figures.\nExtract Sebelum_PPN (subtotal before tax), PPN_11 (tax amount), and Setelah_PPN (grand total after tax).\nIMPORTANT:\n- If the document is an Insurance Policy, Payment Application, Contract, or Receipt that only shows a single total amount (e.g., a total premium, flat fee, or payment amount) without a clear tax breakdown: Put that total amount into \"Setelah_PPN\" (Grand Total) AND \"Sebelum_PPN\" (Subtotal). Set \"PPN_11\" (Tax) to 0. Do not hide the main billing amount in the \"Catatan\" — the final amount to be paid MUST go into \"Setelah_PPN\".\n- If the document is a Purchase Order (PO), Rate Card, or Contract that only lists unit rates without a final billed total, set \"Sebelum_PPN\", \"PPN_11\", and \"Setelah_PPN\" to 0.\n\nSTEP 4 — Match the booking account.\nTo assign the invoice content to the correct booking account and the matching Google Drive folder for that account, use the tool \"booking accounts.\" If no booking account clearly matches after your first search, use \"Unclassified\" as the account and proceed immediately to finalize your answer. Do not repeat the search more than once.\n\nSTEP 5 — Assess confidence and flag for review.\nSet \"confidence_score\" (1–100) based on how certain you are about the extracted values.\nSet \"butuh_review\" to true if ANY of the following apply:\n- The document does not appear to match its expected category\n- Required financial fields (Sebelum_PPN, PPN_11, Setelah_PPN) are not clearly present\n- Any text is blurry, ambiguous, or you are unsure which booking account applies\n- You are extracting a reference number from a non-standard field (e.g. a bank GCMS Ref No., policy number, or application number used in place of an invoice number)\nOtherwise set \"butuh_review\" to false.\n\nSTEP 6 — Find related PO reference (if applicable).\nIf this document mentions a related Purchase Order, contract number, or reference number that connects it to another document (e.g. an invoice citing 'PO No. 12345', or a payment proof referencing a specific PO), record that number in \"Referensi_PO\". This allows related documents to be grouped together later even if they arrived through different files. Leave empty if not mentioned.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attach the JSON as plain text.",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -608,
+        256
+      ],
+      "id": "b5e44e3c-aa0a-4fca-941b-2f1fb29f7b1f",
+      "name": "PO Agent (Vision)",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "STEP 1 — Confirm document type.\nThis document has been routed here as a \"Remittance_Instruction\" (an instruction to make a payment). If it clearly does NOT match this category, set Jenis_Dokumen to what you actually observe, set butuh_review to true, and explain the mismatch in Catatan. Otherwise, set Jenis_Dokumen to \"Remittance_Instruction\".\n\nSTEP 2 — Find the unique reference number.\nAdapt dynamically based on the document type to find the primary identifying number:\n- Standard Invoices / Tax Invoices: Invoice Number, Tax Invoice Number (Nomor Faktur / Faktur Pajak), 請求書番号. Invoices often use formatted code strings containing slashes, letters, and numbers (e.g., 612/AG/SABA-JKT/XI/23).\n- Insurance Policies: Policy Number, 証券番号\n- Contracts / Purchase Orders: Contract Number, PO Number, 契約番号\n- Payment Applications / Bank Transfers: Bank Reference Number (e.g., GCMS Ref No., Reference Number, Transaction Ref No., Application No.)\n- Other Forms/Documents: Whichever prominent tracking, document ID, or reference number is available.\nUse whichever unique reference number is most prominent and appropriate for the document type as \"Nomor_Invoice,\" even if it is not literally labeled \"invoice.\"\nDetermine the currency used in the document and convert it to a standard 3-letter code for \"Mata_Uang\" (e.g. IDR, USD, EUR, SGD, JPY). Currency may be written in different languages or symbols — for example: 円 or ¥ means JPY, 米ドル or $ means USD, Rp means IDR. If no currency is stated anywhere on the document, leave \"Mata_Uang\" empty and note this in \"Catatan.\"\n\nSTEP 3 — Extract financial figures.\nExtract Sebelum_PPN (subtotal before tax), PPN_11 (tax amount), and Setelah_PPN (grand total after tax).\nIMPORTANT:\n- If the document is an Insurance Policy, Payment Application, Contract, or Receipt that only shows a single total amount (e.g., a total premium, flat fee, or payment amount) without a clear tax breakdown: Put that total amount into \"Setelah_PPN\" (Grand Total) AND \"Sebelum_PPN\" (Subtotal). Set \"PPN_11\" (Tax) to 0. Do not hide the main billing amount in the \"Catatan\" — the final amount to be paid MUST go into \"Setelah_PPN\".\n- If the document is a Purchase Order (PO), Rate Card, or Contract that only lists unit rates without a final billed total, set \"Sebelum_PPN\", \"PPN_11\", and \"Setelah_PPN\" to 0.\n\nSTEP 4 — Match the booking account.\nTo assign the invoice content to the correct booking account and the matching Google Drive folder for that account, use the tool \"booking accounts.\" If no booking account clearly matches after your first search, use \"Unclassified\" as the account and proceed immediately to finalize your answer. Do not repeat the search more than once.\n\nSTEP 5 — Assess confidence and flag for review.\nSet \"confidence_score\" (1–100) based on how certain you are about the extracted values.\nSet \"butuh_review\" to true if ANY of the following apply:\n- The document does not appear to match its expected category\n- Required financial fields (Sebelum_PPN, PPN_11, Setelah_PPN) are not clearly present\n- Any text is blurry, ambiguous, or you are unsure which booking account applies\n- You are extracting a reference number from a non-standard field (e.g. a bank GCMS Ref No., policy number, or application number used in place of an invoice number)\nOtherwise set \"butuh_review\" to false.\n\nSTEP 6 — Find related PO reference (if applicable).\nIf this document mentions a related Purchase Order, contract number, or reference number that connects it to another document (e.g. an invoice citing 'PO No. 12345', or a payment proof referencing a specific PO), record that number in \"Referensi_PO\". This allows related documents to be grouped together later even if they arrived through different files. Leave empty if not mentioned.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attach the JSON as plain text.",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -608,
+        432
+      ],
+      "id": "a5b606ca-ac87-4f14-8c53-c26cb61b589a",
+      "name": "Remittance_Instruction Agent (Vision)",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "STEP 1 — Confirm document type.\nThis document has been routed here as a \"Remittance_Advice\" (a confirmation that payment was already made/received). If it clearly does NOT match this category, set Jenis_Dokumen to what you actually observe, set butuh_review to true, and explain the mismatch in Catatan. Otherwise, set Jenis_Dokumen to \"Remittance_Advice\".\n\nSTEP 2 — Find the unique reference number.\nAdapt dynamically based on the document type to find the primary identifying number:\n- Standard Invoices / Tax Invoices: Invoice Number, Tax Invoice Number (Nomor Faktur / Faktur Pajak), 請求書番号. Invoices often use formatted code strings containing slashes, letters, and numbers (e.g., 612/AG/SABA-JKT/XI/23).\n- Insurance Policies: Policy Number, 証券番号\n- Contracts / Purchase Orders: Contract Number, PO Number, 契約番号\n- Payment Applications / Bank Transfers: Bank Reference Number (e.g., GCMS Ref No., Reference Number, Transaction Ref No., Application No.)\n- Other Forms/Documents: Whichever prominent tracking, document ID, or reference number is available.\nUse whichever unique reference number is most prominent and appropriate for the document type as \"Nomor_Invoice,\" even if it is not literally labeled \"invoice.\"\nDetermine the currency used in the document and convert it to a standard 3-letter code for \"Mata_Uang\" (e.g. IDR, USD, EUR, SGD, JPY). Currency may be written in different languages or symbols — for example: 円 or ¥ means JPY, 米ドル or $ means USD, Rp means IDR. If no currency is stated anywhere on the document, leave \"Mata_Uang\" empty and note this in \"Catatan.\"\n\nSTEP 3 — Extract financial figures.\nExtract Sebelum_PPN (subtotal before tax), PPN_11 (tax amount), and Setelah_PPN (grand total after tax).\nIMPORTANT:\n- If the document is an Insurance Policy, Payment Application, Contract, or Receipt that only shows a single total amount (e.g., a total premium, flat fee, or payment amount) without a clear tax breakdown: Put that total amount into \"Setelah_PPN\" (Grand Total) AND \"Sebelum_PPN\" (Subtotal). Set \"PPN_11\" (Tax) to 0. Do not hide the main billing amount in the \"Catatan\" — the final amount to be paid MUST go into \"Setelah_PPN\".\n- If the document is a Purchase Order (PO), Rate Card, or Contract that only lists unit rates without a final billed total, set \"Sebelum_PPN\", \"PPN_11\", and \"Setelah_PPN\" to 0.\n\nSTEP 4 — Match the booking account.\nTo assign the invoice content to the correct booking account and the matching Google Drive folder for that account, use the tool \"booking accounts.\" If no booking account clearly matches after your first search, use \"Unclassified\" as the account and proceed immediately to finalize your answer. Do not repeat the search more than once.\n\nSTEP 5 — Assess confidence and flag for review.\nSet \"confidence_score\" (1–100) based on how certain you are about the extracted values.\nSet \"butuh_review\" to true if ANY of the following apply:\n- The document does not appear to match its expected category\n- Required financial fields (Sebelum_PPN, PPN_11, Setelah_PPN) are not clearly present\n- Any text is blurry, ambiguous, or you are unsure which booking account applies\n- You are extracting a reference number from a non-standard field (e.g. a bank GCMS Ref No., policy number, or application number used in place of an invoice number)\nOtherwise set \"butuh_review\" to false.\n\nSTEP 6 — Find related PO reference (if applicable).\nIf this document mentions a related Purchase Order, contract number, or reference number that connects it to another document (e.g. an invoice citing 'PO No. 12345', or a payment proof referencing a specific PO), record that number in \"Referensi_PO\". This allows related documents to be grouped together later even if they arrived through different files. Leave empty if not mentioned.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attach the JSON as plain text.",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -592,
+        624
+      ],
+      "id": "4d687806-3f90-4de6-8cc2-715f09e2f203",
+      "name": "Remittance_Advice Agent (Vision)",
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 794901648,
+          "mode": "list",
+          "cachedResultName": "Charts_Of_Account",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=794901648"
+        },
+        "options": {}
+      },
+      "id": "15fdf175-9be0-4ac6-a9e8-7e18da0e709d",
+      "name": "Chart of Accounts",
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "position": [
+        -608,
+        1040
+      ],
+      "typeVersion": 4.7,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 609988306,
+          "mode": "list",
+          "cachedResultName": "Remittance_Instruction",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=609988306"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Nama }}",
+            "Nomor Invoice": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Nomor_Invoice }}",
+            "Nomor Proyek": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Nomor_Proyek }}",
+            "Tanggal": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Tanggal }}",
+            "Sebelum PPN": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Sebelum_PPN }}",
+            "11%": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.PPN_11 }}",
+            "Setelah PPN": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Setelah_PPN }}",
+            "Mata Uang": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Mata_Uang }}",
+            "Catatan": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Catatan }}",
+            "Referensi_PO": "={{ $('Remittance_Instruction Agent (Vision)').item.json.output.Referensi_PO }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $json._file_id }}/view",
+            "File_ID": "={{ $json._file_id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "416d14c4-1337-401d-9160-3dc0c0353326",
+      "name": "Update Remittance_Instruction",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        160,
+        480
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 851654115,
+          "mode": "list",
+          "cachedResultName": "Remittance_Advice",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=851654115"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nama }}",
+            "Nomor Invoice": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nomor_Invoice }}",
+            "Nomor Proyek": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nomor_Proyek }}",
+            "Tanggal": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Tanggal }}",
+            "Sebelum PPN": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Sebelum_PPN }}",
+            "11%": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.PPN_11 }}",
+            "Setelah PPN": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Setelah_PPN }}",
+            "Mata Uang": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Mata_Uang }}",
+            "Catatan": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Catatan }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $json._file_id }}/view",
+            "Referensi_PO": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Referensi_PO }}",
+            "File_ID": "={{ $json._file_id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "8160439d-16cf-4ce8-ac19-7af50c119f24",
+      "name": "Update Remittance_Advice",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        144,
+        688
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 2,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -3888,
+        656
+      ],
+      "id": "4f4ed44b-d6bc-42c1-83f1-0337e81da05a",
+      "name": "Loop Over Items6"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1I9nobNSHQKyS-E3cn0RMJVDvJKrbPg2E",
+            "mode": "list",
+            "cachedResultName": "All EOT 6",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1I9nobNSHQKyS-E3cn0RMJVDvJKrbPg2E"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -4528,
+        672
+      ],
+      "id": "ea13e384-5c07-4bd6-91a6-66b4ef0406f2",
+      "name": "Search files and folders8",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "JtzXuMbjvw8uuVpk",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU",
+          "mode": "list",
+          "cachedResultName": "Master Log GE",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2097496697,
+          "mode": "list",
+          "cachedResultName": "EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit#gid=2097496697"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -4400,
+        896
+      ],
+      "id": "6991a8f1-39a7-4723-baee-265f220146da",
+      "name": "Get row(s) in sheet7",
+      "alwaysOutputData": true,
+      "executeOnce": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "advanced": true,
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "id",
+              "field2": "File_ID"
+            }
+          ]
+        },
+        "joinMode": "keepNonMatches",
+        "outputDataFrom": "input1",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -4144,
+        656
+      ],
+      "id": "71650cd8-fa29-4c48-8b17-c6655235a7e4",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3ee59cf4-0124-4f87-8ffd-9b1340bbb73e",
+              "name": "_file_id",
+              "value": "={{ $('Download file1').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "74b1466e-53ab-4b61-80f3-408e19290f02",
+              "name": "_file_name",
+              "value": "={{ $('Download file1').item.json.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -2672,
+        720
+      ],
+      "id": "54dca7de-1d1b-46bb-9f53-db66109b529a",
+      "name": "Edit Fields8"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -1776,
+        560
+      ],
+      "id": "649548a0-5a3e-46df-9ee9-57c69753dae8",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c7096b20-1307-464b-8288-e7fbca0e2742",
+              "name": "id",
+              "value": "={{ $json._file_id }}",
+              "type": "string"
+            },
+            {
+              "id": "ca880d3f-e636-43f7-add2-ec9f418f9cfe",
+              "name": "name",
+              "value": "={{ $json._file_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -1296,
+        448
+      ],
+      "id": "ca0feea9-1b3c-4144-903b-00f37cb4c50e",
+      "name": "Edit Fields9"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "STEP 1 — Confirm document type.\nThis document has been routed here as a \"Remittance_Advice\" (a confirmation that payment was already made/received). If it clearly does NOT match this category, set Jenis_Dokumen to what you actually observe, set butuh_review to true, and explain the mismatch in Catatan. Otherwise, set Jenis_Dokumen to \"Remittance_Advice\".\n\nSTEP 2 — Find the unique reference number.\nAdapt dynamically based on the document type to find the primary identifying number:\n- Standard Invoices / Tax Invoices: Invoice Number, Tax Invoice Number (Nomor Faktur / Faktur Pajak), 請求書番号. Invoices often use formatted code strings containing slashes, letters, and numbers (e.g., 612/AG/SABA-JKT/XI/23).\n- Insurance Policies: Policy Number, 証券番号\n- Contracts / Purchase Orders: Contract Number, PO Number, 契約番号\n- Payment Applications / Bank Transfers: Bank Reference Number (e.g., GCMS Ref No., Reference Number, Transaction Ref No., Application No.)\n- Other Forms/Documents: Whichever prominent tracking, document ID, or reference number is available.\nUse whichever unique reference number is most prominent and appropriate for the document type as \"Nomor_Invoice,\" even if it is not literally labeled \"invoice.\"\nDetermine the currency used in the document and convert it to a standard 3-letter code for \"Mata_Uang\" (e.g. IDR, USD, EUR, SGD, JPY). Currency may be written in different languages or symbols — for example: 円 or ¥ means JPY, 米ドル or $ means USD, Rp means IDR. If no currency is stated anywhere on the document, leave \"Mata_Uang\" empty and note this in \"Catatan.\"\n\nSTEP 3 — Extract financial figures.\nExtract Sebelum_PPN (subtotal before tax), PPN_11 (tax amount), and Setelah_PPN (grand total after tax).\nIMPORTANT:\n- If the document is an Insurance Policy, Payment Application, Contract, or Receipt that only shows a single total amount (e.g., a total premium, flat fee, or payment amount) without a clear tax breakdown: Put that total amount into \"Setelah_PPN\" (Grand Total) AND \"Sebelum_PPN\" (Subtotal). Set \"PPN_11\" (Tax) to 0. Do not hide the main billing amount in the \"Catatan\" — the final amount to be paid MUST go into \"Setelah_PPN\".\n- If the document is a Purchase Order (PO), Rate Card, or Contract that only lists unit rates without a final billed total, set \"Sebelum_PPN\", \"PPN_11\", and \"Setelah_PPN\" to 0.\n\nSTEP 4 — Match the booking account.\nTo assign the invoice content to the correct booking account and the matching Google Drive folder for that account, use the tool \"booking accounts.\" If no booking account clearly matches after your first search, use \"Unclassified\" as the account and proceed immediately to finalize your answer. Do not repeat the search more than once.\n\nSTEP 5 — Assess confidence and flag for review.\nSet \"confidence_score\" (1–100) based on how certain you are about the extracted values.\nSet \"butuh_review\" to true if ANY of the following apply:\n- The document does not appear to match its expected category\n- Required financial fields (Sebelum_PPN, PPN_11, Setelah_PPN) are not clearly present\n- Any text is blurry, ambiguous, or you are unsure which booking account applies\n- You are extracting a reference number from a non-standard field (e.g. a bank GCMS Ref No., policy number, or application number used in place of an invoice number)\nOtherwise set \"butuh_review\" to false.\n\nSTEP 6 — Find related PO/Invoice reference (if applicable).\nCheck ALL of the following sources, in order, and use the first one that contains a match:\n1. The document content itself — look for a PO number, invoice number, contract number, or reference number printed on the document (e.g. \"PO No. 12345\", \"Ref: INV-8890\").\n2. The original file name (given below) — files are sometimes named using a PO or invoice number specifically because the person filing it wanted to show it relates to that document, even if the number doesn't appear anywhere in the document content itself. For example, a bank transfer receipt with no PO number written anywhere on it, but named \"PO-TBL3-XYZ-123_transfer.pdf\", should have Referensi_PO = \"PO-TBL3-XYZ-123\".\n\nNama file asli: {{ $('Download file1').item.json.name }}\n\nRecord whichever reference you find in \"Referensi_PO\". If a number appears in both content and filename, prefer the one in the content (it's the more authoritative source). Leave empty only if no reference number is found in either place.\n\nIMPORTANT: For your response to user, you MUST use the `format_final_json_response` tool with your complete answer formatted according to the required schema. Do not attach the JSON as plain text.",
+        "hasOutputParser": true,
+        "options": {
+          "passthroughBinaryImages": true,
+          "passthroughBinaryPdfs": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        -560,
+        848
+      ],
+      "id": "75317609-ff43-4451-99eb-29472ce99a18",
+      "name": "Bukti Transfer Agent (Vision)",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -240,
+        80
+      ],
+      "id": "9ff7ff27-5476-4def-86f3-9cac6024c0e5",
+      "name": "Merge3"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -240,
+        256
+      ],
+      "id": "c585a65d-8b20-477d-b3c4-cbb11a315743",
+      "name": "Merge4"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -240,
+        464
+      ],
+      "id": "affedf7f-964d-47a9-853d-30d5cbd6be5f",
+      "name": "Merge5"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -208,
+        672
+      ],
+      "id": "023e696e-c496-409d-9920-6675c008c45b",
+      "name": "Merge6"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -304,
+        816
+      ],
+      "id": "4adaa1a5-6fb9-4acc-bdae-5e3cf5f45c82",
+      "name": "Merge7"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        848,
+        320
+      ],
+      "id": "713ec1f2-e5d6-4e68-83c2-28995d0eafe0",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "f178bd43-e0dc-4d6a-b671-94158573822e",
+              "leftValue": "={{ $binary.data.fileName }}",
+              "rightValue": "split.pdf",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -3184,
+        800
+      ],
+      "id": "580d8ae6-31fd-4906-8cc1-2dc2b53fce03",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1psyemvKljCZFtx4TyalY1tVgBf41KGXp22U8jssO8A0",
+          "mode": "list",
+          "cachedResultName": "Processed Unknown",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1psyemvKljCZFtx4TyalY1tVgBf41KGXp22U8jssO8A0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 493997667,
+          "mode": "list",
+          "cachedResultName": "Unknown_File",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1psyemvKljCZFtx4TyalY1tVgBf41KGXp22U8jssO8A0/edit#gid=493997667"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama_File": "={{ $('Download file1').item.json.name }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $('Download file1').item.json.id }}/view"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Nama_File",
+              "displayName": "Nama_File",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2656,
+        992
+      ],
+      "id": "21ada91d-dabd-4969-8132-dd0dfc6af9b8",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c7096b20-1307-464b-8288-e7fbca0e2742",
+              "name": "id",
+              "value": "={{ $json._file_id }}",
+              "type": "string"
+            },
+            {
+              "id": "ca880d3f-e636-43f7-add2-ec9f418f9cfe",
+              "name": "name",
+              "value": "={{ $json._file_name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -2912,
+        976
+      ],
+      "id": "9c7f1ce4-0ba2-4094-b1d7-59d389ed5d8e",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU",
+          "mode": "list",
+          "cachedResultName": "Master Log GE",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2097496697,
+          "mode": "list",
+          "cachedResultName": "EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit#gid=2097496697"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "File_ID": "={{ $json.File_ID }}",
+            "File_Name": "={{ $json.Nama }}",
+            "File_Link": "=https://drive.google.com/file/d/{{ $json.File_ID }}/view"
+          },
+          "matchingColumns": [
+            "File_ID"
+          ],
+          "schema": [
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_Name",
+              "displayName": "File_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File_Link",
+              "displayName": "File_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2432,
+        960
+      ],
+      "id": "55f5a521-6b15-4b64-8881-1ceedc8b7783",
+      "name": "Append or update row in sheet1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -800,
+        128
+      ],
+      "id": "1507d6c2-db85-4355-8bc7-eb404cb72a04",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -784,
+        288
+      ],
+      "id": "1237272d-fd74-4c88-a906-06eb60b381a4",
+      "name": "Google Gemini Chat Model3",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -800,
+        448
+      ],
+      "id": "801c4ec6-6f8e-4529-bae5-b8b5aa40a0f6",
+      "name": "Google Gemini Chat Model4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -784,
+        640
+      ],
+      "id": "d4164689-7a31-4c3a-8827-83004fe897d2",
+      "name": "Google Gemini Chat Model5",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.1,
+      "position": [
+        -768,
+        832
+      ],
+      "id": "76871703-9fb6-4a57-9e28-081f0bf96f2f",
+      "name": "Google Gemini Chat Model6",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "KcG1TzB99LV4Ezkg",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2033402787,
+          "mode": "list",
+          "cachedResultName": "Bukti Transfer",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=2033402787"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nama }}",
+            "Nomor Invoice": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nomor_Invoice }}",
+            "Nomor Proyek": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Nomor_Proyek }}",
+            "Tanggal": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Tanggal }}",
+            "Sebelum PPN": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Sebelum_PPN }}",
+            "11%": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.PPN_11 }}",
+            "Setelah PPN": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Setelah_PPN }}",
+            "Mata Uang": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Mata_Uang }}",
+            "Catatan": "={{ $('Remittance_Advice Agent (Vision)').item.json.output.Catatan }}",
+            "File Link": "=https://drive.google.com/file/d/{{ $json._file_id }}/view",
+            "Referensi_PO": "={{ $('Bukti Transfer Agent (Vision)').item.json.output.Referensi_PO }}",
+            "File_ID": "={{ $json._file_id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "id": "2f37fafd-c6be-4189-8a46-c5a0b47e3a7e",
+      "name": "Update Bukti Transfer",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        144,
+        912
+      ],
+      "typeVersion": 4.5,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "c84775f5-28ce-4b4a-8f75-39fb23e0835f",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -4752,
+        832
+      ],
+      "id": "0e30ae7b-50e3-4f22-bae2-4c4b25eef7fe",
+      "name": "Webhook",
+      "webhookId": "c84775f5-28ce-4b4a-8f75-39fb23e0835f"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI",
+          "mode": "list",
+          "cachedResultName": "Processed Invoices GE EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1700632464,
+          "mode": "list",
+          "cachedResultName": "Need Review",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JhlI1falE8axRo2PhiUBs0WhOrn-U90erik3iHBc1nI/edit#gid=1700632464"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nama": "={{ $json._file_name }}",
+            "File Link": "=https://drive.google.com/file/d{{ $json._file_id }}/view"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "No",
+              "displayName": "No",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nama",
+              "displayName": "Nama",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nomor Invoice",
+              "displayName": "Nomor Invoice",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Nomor Proyek",
+              "displayName": "Nomor Proyek",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tanggal",
+              "displayName": "Tanggal",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Sebelum PPN",
+              "displayName": "Sebelum PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "11%",
+              "displayName": "11%",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Setelah PPN",
+              "displayName": "Setelah PPN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mata Uang",
+              "displayName": "Mata Uang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Catatan",
+              "displayName": "Catatan",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Referensi_PO",
+              "displayName": "Referensi_PO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File Link",
+              "displayName": "File Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1088,
+        192
+      ],
+      "id": "582ea0f8-333e-48de-afd9-7532b0a21716",
+      "name": "processed unknown",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU",
+          "mode": "list",
+          "cachedResultName": "Master Log GE",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2097496697,
+          "mode": "list",
+          "cachedResultName": "EOT6",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Dw_MlLCNEBZaBpBww1nXPcd7IlyEqZevpTjaw8qTqkU/edit#gid=2097496697"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "File_ID": "={{ $json.File_ID }}",
+            "File_Name": "={{ $json.Nama }}",
+            "File_Link": "=https://drive.google.com/file/d/{{ $json.File_ID }}/view"
+          },
+          "matchingColumns": [
+            "File_ID"
+          ],
+          "schema": [
+            {
+              "id": "File_ID",
+              "displayName": "File_ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "File_Name",
+              "displayName": "File_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File_Link",
+              "displayName": "File_Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        400,
+        304
+      ],
+      "id": "c24d690e-0685-4823-8629-c75ff24592bd",
+      "name": "update master log",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "7j2g2P6xxa3Xw0TX",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b68532cc-0db8-4db2-88d6-b26371401681",
+              "name": "File_ID",
+              "value": "={{ $('Download file1').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "c763614b-a51c-49cc-9c4c-f0acb35d9bc2",
+              "name": "Nama",
+              "value": "={{ $('Download file1').item.json.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        -576,
+        -128
+      ],
+      "id": "4991da33-c1ec-4176-b737-003623bb4453",
+      "name": "Edit Fields1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Update Booking List": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Invoice Agent (Vision)",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "PO Agent (Vision)",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "Remittance_Instruction Agent (Vision)",
+            "type": "ai_outputParser",
+            "index": 0
+          },
+          {
+            "node": "Remittance_Advice Agent (Vision)",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Invoice Agent (Vision)": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Classifier Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split a PDF": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Purchase Order": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download file1": {
+      "main": [
+        [
+          {
+            "node": "Split a PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Classifier Agent": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Classifier Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Invoice Agent (Vision)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "PO Agent (Vision)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Remittance_Instruction Agent (Vision)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Remittance_Advice Agent (Vision)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Bukti Transfer Agent (Vision)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "PO Agent (Vision)": {
+      "main": [
+        [
+          {
+            "node": "Merge4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remittance_Instruction Agent (Vision)": {
+      "main": [
+        [
+          {
+            "node": "Merge5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Remittance_Advice Agent (Vision)": {
+      "main": [
+        [
+          {
+            "node": "Merge6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chart of Accounts": {
+      "ai_tool": [
+        [
+          {
+            "node": "Invoice Agent (Vision)",
+            "type": "ai_tool",
+            "index": 0
+          },
+          {
+            "node": "PO Agent (Vision)",
+            "type": "ai_tool",
+            "index": 0
+          },
+          {
+            "node": "Remittance_Instruction Agent (Vision)",
+            "type": "ai_tool",
+            "index": 0
+          },
+          {
+            "node": "Remittance_Advice Agent (Vision)",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Remittance_Instruction": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Remittance_Advice": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items6": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Download file1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search files and folders8": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet7": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields8": {
+      "main": [
+        [
+          {
+            "node": "Classifier Agent",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields9": {
+      "main": [
+        [
+          {
+            "node": "processed unknown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bukti Transfer Agent (Vision)": {
+      "main": [
+        [
+          {
+            "node": "Merge7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Update Booking List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge4": {
+      "main": [
+        [
+          {
+            "node": "Update Purchase Order",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge5": {
+      "main": [
+        [
+          {
+            "node": "Update Remittance_Instruction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge6": {
+      "main": [
+        [
+          {
+            "node": "Update Remittance_Advice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge7": {
+      "main": [
+        [
+          {
+            "node": "Update Bukti Transfer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet1": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Invoice Agent (Vision)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "PO Agent (Vision)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Remittance_Instruction Agent (Vision)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Remittance_Advice Agent (Vision)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Bukti Transfer Agent (Vision)",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Bukti Transfer": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Search files and folders8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get row(s) in sheet7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "processed unknown": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "update master log": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "update master log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "errorWorkflow": "iHYaux7pd5GN5mrS",
+    "timezone": "Asia/Jakarta",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "e35bce5c-6582-47e2-bd4f-efccd3dcdb79",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a0fd91f92abd9fdd2933fe9f8975cb1d11bf125c06948a7eed99133071288567"
+  },
+  "nodeGroups": [],
+  "id": "7W09mhkyiKPzGdKi",
+  "tags": []
+}
