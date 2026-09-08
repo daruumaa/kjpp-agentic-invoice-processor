@@ -1,7 +1,5 @@
 # Intelligent Financial Document Processing Workflow (n8n + Gemini AI)
 
-![n8n Workflow Screenshot](screenshot/image.png)
-
 An advanced, automated n8n workflow designed to fetch, classify, and extract structured data from various financial documents using Google Gemini's multimodal Vision AI.
 
 This workflow acts as an end-to-end automated accounting assistant. It monitors incoming files, intelligently identifies document types, extracts relevant data using specialized AI architectures, and logs structured outputs directly into specific Google Sheets and a centralized Master Log[cite: 1].
