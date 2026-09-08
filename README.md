@@ -77,4 +77,4 @@ To run this workflow in your own n8n instance, configure the following credentia
 
 ---
 
-Built with [n8n](https://n8n.io) and [Google Gemini](https://ai.google.dev)[cite: 1].
+Built with [n8n](https://n8n.io) and [Google Gemini](https://ai.google.dev).
